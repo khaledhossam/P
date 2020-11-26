@@ -1,0 +1,23 @@
+[
+  {
+    "name": "products",
+    "path": "/products",
+    "component": "D:\\\\task\\\\pencil-task\\\\pages\\\\products\\\\index.vue",
+    "chunkName": "pages/products/index",
+    "_name": "_0aa2a994"
+  },
+  {
+    "name": "products-add",
+    "path": "/products/add",
+    "component": "D:\\\\task\\\\pencil-task\\\\pages\\\\products\\\\add\\\\index.vue",
+    "chunkName": "pages/products/add/index",
+    "_name": "_7222b346"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\task\\\\pencil-task\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_129bcacc"
+  }
+]
