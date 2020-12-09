@@ -10,7 +10,7 @@ import performanceService from './service.performance.js'
 import analyticsService from './service.analytics.js'
 import remoteConfigService from './service.remoteConfig.js'
 
-const appConfig = {"apiKey":"AIzaSyCVbp7etHe5voE7ktlmIjLxkHs8q75IBWc","authDomain":"pencil-1c1fe.firebaseapp.com","databaseURL":"https:\u002F\u002Fpencil-1c1fe.firebaseio.com","projectId":"pencil-1c1fe","storageBucket":"pencil-1c1fe.appspot.com","messagingSenderId":"739325633580","appId":"1:739325633580:web:c025868d054e2e07d31d89","measurementId":"G-5SLGG0F2R2"}
+const appConfig = {"apiKey":"AIzaSyCVbp7etHe5voE7ktlmIjLxkHs8q75IBWc","authDomain":"pencil-1c1fe.firebaseapp.com","databaseURL":"https:\u002F\u002Fpencil-1c1fe.firebaseio.com","projectId":"pencil-1c1fe","storageBucket":"gs:\u002F\u002Fpencil-1c1fe.appspot.com","messagingSenderId":"739325633580","appId":"1:739325633580:web:c025868d054e2e07d31d89","measurementId":"G-5SLGG0F2R2"}
 
 export default async (ctx, inject) => {
   /****************************************

@@ -3,28 +3,24 @@
     "name": "products",
     "path": "/products",
     "component": "D:\\\\task\\\\Pencil-github\\\\pages\\\\products\\\\index.vue",
-    "chunkName": "pages/products/index",
-    "_name": "_ead10e98"
+    "chunkName": "pages/products/index"
   },
   {
     "name": "products-add",
     "path": "/products/add",
     "component": "D:\\\\task\\\\Pencil-github\\\\pages\\\\products\\\\add\\\\index.vue",
-    "chunkName": "pages/products/add/index",
-    "_name": "_defed0c2"
+    "chunkName": "pages/products/add/index"
   },
   {
     "name": "products-edit-id",
     "path": "/products/edit/:id?",
     "component": "D:\\\\task\\\\Pencil-github\\\\pages\\\\products\\\\edit\\\\_id.vue",
-    "chunkName": "pages/products/edit/_id",
-    "_name": "_48b4cb5c"
+    "chunkName": "pages/products/edit/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\task\\\\Pencil-github\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_260fe4d0"
+    "chunkName": "pages/index"
   }
 ]

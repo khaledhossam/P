@@ -45,7 +45,7 @@ export default {
           authDomain: "pencil-1c1fe.firebaseapp.com",
           databaseURL: "https://pencil-1c1fe.firebaseio.com",
           projectId: "pencil-1c1fe",
-          storageBucket: "pencil-1c1fe.appspot.com",
+          storageBucket: "gs://pencil-1c1fe.appspot.com",
           messagingSenderId: "739325633580",
           appId: "1:739325633580:web:c025868d054e2e07d31d89",
           measurementId: "G-5SLGG0F2R2"

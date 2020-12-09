@@ -54,7 +54,7 @@ export default {
       description: "",
       price: "",
       file: "",
-      user: {},
+      user: {}
     };
   },
   async fetch() {
@@ -67,10 +67,10 @@ export default {
       await this.$fire.storage
         .ref("'images/'+" + this.file.lastModified)
         .put(this.file, {
-          contentType: this.file.type,
+          contentType: this.file.type
         })
-        .then((res) => {
-          return res.ref.getDownloadURL().then((url) => {
+        .then(res => {
+          return res.ref.getDownloadURL().then(url => {
             this.file = url;
             console.log(this.file);
           });
@@ -85,7 +85,7 @@ export default {
           name: this.name,
           price: this.price,
           description: this.description,
-          image: this.file,
+          image: this.file
         });
       } catch (e) {
         console.log(e);
@@ -93,11 +93,11 @@ export default {
       }
       this.$bvToast.toast("Product added successfuly", {
         variant: "success",
-        solid: true,
+        solid: true
       });
       this.$router.push("/products");
-    },
-  },
+    }
+  }
 };
 </script>
 

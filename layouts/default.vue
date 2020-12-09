@@ -34,8 +34,7 @@ body {
   border-color: #1b9e98;
 }
 .btn {
-  padding: 1rem 1.5rem;
-  width: 150px;
+  padding: 1rem 2rem;
   border-radius: 2rem;
   background: #1b9e98;
   border-color: #1b9e98;
