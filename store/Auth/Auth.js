@@ -24,6 +24,7 @@ export default {
 
         //Set the cookie
         Cookie.set("access", token);
+        Cookie.set("user", this.$fire.auth.currentUser);
         vuexContext.commit("authUser", this.$fire.auth.currentUser);
       } catch (e) {
         throw e;

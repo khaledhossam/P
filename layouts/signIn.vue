@@ -1,14 +1,9 @@
 <template>
   <div>
-    <Navbar />
     <Nuxt />
   </div>
 </template>
-<script>
-export default {
-  middleware: "auth-user",
-};
-</script>
+
 <style>
 body {
   background: #111;

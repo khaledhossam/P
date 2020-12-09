@@ -30,6 +30,7 @@
 
 <script>
 export default {
+  layout:'signIn',
   data() {
     return {
       email: "",

@@ -1,7 +1,8 @@
 <template>
   <b-container>
     <div class="login text-center">
-      <b-form @submit.prevent="addProduct">
+      <b-form @submit.prevent="editProduct">
+        <b-img :src="this.image" width="200px"></b-img>
         <b-form-group id="form-product-name">
           <b-form-input
             id="product-name"
@@ -38,7 +39,7 @@
             required
           ></b-form-file>
         </b-form-group>
-        <b-button type="submit" variant="primary">Add product</b-button>
+        <b-button type="submit" variant="primary">Save Changes</b-button>
       </b-form>
     </div>
   </b-container>
@@ -50,15 +51,18 @@ import Cookie from "js-cookie";
 export default {
   data() {
     return {
+      user: {},
       name: "",
       description: "",
       price: "",
+      image: "",
       file: "",
-      user: {},
     };
   },
   async fetch() {
     this.user = JSON.parse(Cookie.get("user"));
+    console.log(this.user);
+    await this.getProductData();
   },
   methods: {
     async handleUpload(e) {
@@ -72,29 +76,44 @@ export default {
         .then((res) => {
           return res.ref.getDownloadURL().then((url) => {
             this.file = url;
+            this.image = url;
             console.log(this.file);
           });
         });
     },
-    async addProduct() {
-      const messageRef = this.$fire.firestore.collection(
-        `products/${this.user.uid}/products`
-      );
-      try {
-        await messageRef.add({
-          name: this.name,
-          price: this.price,
-          description: this.description,
-          image: this.file,
+    async getProductData() {
+      await this.$fire.firestore
+        .collection(`products/${this.user.uid}/products/`)
+        .get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            (this.id = doc.id),
+              (this.name = doc.data().name),
+              (this.description = doc.data().description),
+              (this.price = doc.data().price);
+            this.image = doc.data().image;
+          });
+          console.log(this.name);
         });
-      } catch (e) {
-        console.log(e);
-        return;
-      }
-      this.$bvToast.toast("Product added successfuly", {
-        variant: "success",
-        solid: true,
-      });
+    },
+    async editProduct() {
+      this.$fire.firestore
+        .collection(
+          `products/${this.user.uid}/products`
+        )
+        .doc(this.$route.params.id)
+        .update({
+          name: this.name,
+          description: this.description,
+          price: this.price,
+          image: this.file,
+        })
+        .then(() => {
+          console.log("Document Edit successfully!");
+        })
+        .catch((error) => {
+          console.error("Error Edit document: ", error);
+        });
       this.$router.push("/products");
     },
   },

@@ -13,9 +13,10 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_1a7b70a7 from 'nuxt_plugin_plugin_1a7b70a7' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_4bc9490e from 'nuxt_plugin_bootstrapvue_4bc9490e' // Source: .\\bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_index_30a1e6b1 from 'nuxt_plugin_index_30a1e6b1' // Source: .\\firebase\\index.js (mode: 'all')
+import nuxt_plugin_plugin_84a1442e from 'nuxt_plugin_plugin_84a1442e' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_594c39bb from 'nuxt_plugin_bootstrapvue_594c39bb' // Source: .\\bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_index_d0e65ea2 from 'nuxt_plugin_index_d0e65ea2' // Source: .\\firebase\\index.js (mode: 'all')
+import nuxt_plugin_storeData_1381473c from 'nuxt_plugin_storeData_1381473c' // Source: ..\\plugins\\storeData.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -201,16 +202,20 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_1a7b70a7 === 'function') {
-    await nuxt_plugin_plugin_1a7b70a7(app.context, inject)
+  if (typeof nuxt_plugin_plugin_84a1442e === 'function') {
+    await nuxt_plugin_plugin_84a1442e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_4bc9490e === 'function') {
-    await nuxt_plugin_bootstrapvue_4bc9490e(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_594c39bb === 'function') {
+    await nuxt_plugin_bootstrapvue_594c39bb(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_index_30a1e6b1 === 'function') {
-    await nuxt_plugin_index_30a1e6b1(app.context, inject)
+  if (typeof nuxt_plugin_index_d0e65ea2 === 'function') {
+    await nuxt_plugin_index_d0e65ea2(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_storeData_1381473c === 'function') {
+    await nuxt_plugin_storeData_1381473c(app.context, inject)
   }
 
   // Lock enablePreview in context

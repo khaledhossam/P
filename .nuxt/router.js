@@ -3,9 +3,10 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0aa2a994 = () => interopDefault(import('..\\pages\\products\\index.vue' /* webpackChunkName: "pages/products/index" */))
-const _7222b346 = () => interopDefault(import('..\\pages\\products\\add\\index.vue' /* webpackChunkName: "pages/products/add/index" */))
-const _129bcacc = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _ead10e98 = () => interopDefault(import('..\\pages\\products\\index.vue' /* webpackChunkName: "pages/products/index" */))
+const _defed0c2 = () => interopDefault(import('..\\pages\\products\\add\\index.vue' /* webpackChunkName: "pages/products/add/index" */))
+const _48b4cb5c = () => interopDefault(import('..\\pages\\products\\edit\\_id.vue' /* webpackChunkName: "pages/products/edit/_id" */))
+const _260fe4d0 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -25,15 +26,19 @@ export const routerOptions = {
 
   routes: [{
     path: "/products",
-    component: _0aa2a994,
+    component: _ead10e98,
     name: "products"
   }, {
     path: "/products/add",
-    component: _7222b346,
+    component: _defed0c2,
     name: "products-add"
   }, {
+    path: "/products/edit/:id?",
+    component: _48b4cb5c,
+    name: "products-edit-id"
+  }, {
     path: "/",
-    component: _129bcacc,
+    component: _260fe4d0,
     name: "index"
   }],
 
