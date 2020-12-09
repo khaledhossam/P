@@ -7,7 +7,7 @@ email :khaled@khaled.com
 password :123456
 
 
-User 1 :
+User 2 :
 email :khaled@admin.com
 password :123456
 
