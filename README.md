@@ -2,6 +2,18 @@
 
 ## Build Setup
 
+User 1 :
+email :khaled@khaled.com
+password :123456
+
+
+User 1 :
+email :khaled@admin.com
+password :123456
+
+
+
+
 ```bash
 # install dependencies
 $ npm install
